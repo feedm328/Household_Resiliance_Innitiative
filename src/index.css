@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-hri-green: #132E27;
+  --color-hri-green-light: #224d42;
+  --color-hri-green-dark: #0a1d19;
+  
+  --color-hri-gold: #B38F4D;
+  --color-hri-gold-light: #d2af71;
+  --color-hri-gold-dark: #8e6c34;
+
+  --color-hri-cream: #FCF9F2;
+  --color-hri-cream-light: #FFFFFF;
+  --color-hri-cream-dark: #f1ebd9;
+  
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", "Inter", sans-serif;
+  
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 0px;
+}
+
+@layer base {
+  :root {
+    --background: 40 30% 97%; /* #FCF9F2 */
+    --foreground: 165 41% 10%; /* #0B1C18 */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 165 41% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 165 41% 10%;
+    
+    --primary: 165 41% 13%; /* #132E27 (Dark Green) */
+    --primary-foreground: 40 30% 97%; /* Cream */
+    
+    --secondary: 39 40% 50%; /* #B38F4D (Gold) */
+    --secondary-foreground: 165 41% 10%;
+    
+    --muted: 40 10% 90%;
+    --muted-foreground: 165 15% 40%;
+    
+    --accent: 39 40% 50%; /* Gold */
+    --accent-foreground: 40 30% 97%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 165 15% 85%;
+    --input: 165 15% 85%;
+    --ring: 165 41% 13%;
+    
+    --radius: 0px; /* Sharp corners */
+  }
+
+  .dark {
+    --background: 165 41% 8%; /* Deep Dark Forest Green */
+    --foreground: 40 30% 97%; /* Cream text */
+    
+    --card: 165 41% 11%;
+    --card-foreground: 40 30% 97%;
+    
+    --popover: 165 41% 8%;
+    --popover-foreground: 40 30% 97%;
+    
+    --primary: 39 40% 50%; /* Gold is primary accent in dark mode */
+    --primary-foreground: 165 41% 8%;
+    
+    --secondary: 165 41% 13%;
+    --secondary-foreground: 40 30% 97%;
+    
+    --muted: 165 20% 18%;
+    --muted-foreground: 39 10% 70%;
+    
+    --accent: 39 40% 50%;
+    --accent-foreground: 165 41% 8%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 165 20% 18%;
+    --input: 165 20% 18%;
+    --ring: 39 40% 50%;
+    
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    border-radius: 0px !important; /* Force sharp corners on everything */
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Utility Classes for Logo Colors */
+.text-hri-green {
+  color: #132E27;
+}
+.bg-hri-green {
+  background-color: #132E27;
+}
+.border-hri-green {
+  border-color: #132E27;
+}
+.text-hri-gold {
+  color: #B38F4D;
+}
+.bg-hri-gold {
+  background-color: #B38F4D;
+}
+.border-hri-gold {
+  border-color: #B38F4D;
+}
+.bg-hri-cream {
+  background-color: #FCF9F2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FCF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #132E27;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B38F4D;
+}
+
+/* GSAP overlay blocker to avoid flashes during initial animation rendering */
+.gsap-reveal {
+  visibility: hidden;
+}
