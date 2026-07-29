@@ -124,7 +124,17 @@ const ProgramDetailModal: React.FC<ModalProps> = ({ isOpen, onClose, program }) 
         )}
 
         {/* Modal Bottom Call to Action */}
-        <div className="mt-8 pt-6 border-t border-hri-green/10 flex justify-end">
+        <div className="mt-8 pt-6 border-t border-hri-green/10 flex justify-end gap-3 flex-wrap">
+          {program.applyLink && (
+            <a
+              href={program.applyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-hri-gold text-hri-green-dark hover:bg-hri-green hover:text-hri-cream px-6 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors duration-300 text-center"
+            >
+              Apply for Assistance &rarr;
+            </a>
+          )}
           <button 
             onClick={handleClose}
             className="border border-hri-green text-hri-green hover:bg-hri-green hover:text-hri-cream px-6 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors duration-300"

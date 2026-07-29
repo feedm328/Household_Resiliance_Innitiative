@@ -28,7 +28,8 @@ const ProgramList: React.FC = () => {
           <p>A small measure of stability today can create the breathing room a family needs to rebuild tomorrow.</p>
         </div>
       ),
-      icon: <Heart size={24} className="text-hri-gold" />
+      icon: <Heart size={24} className="text-hri-gold" />,
+      applyLink: 'https://householdresilientapply.netlify.app/'
     },
     {
       id: 2,
@@ -172,13 +173,23 @@ const ProgramList: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-hri-green/5">
+              <div className="pt-4 border-t border-hri-green/5 flex flex-col sm:flex-row gap-3 md:justify-between">
                 <button
                   onClick={() => openDetails(program)}
-                  className="bg-hri-green text-hri-cream hover:bg-hri-gold hover:text-hri-green font-bold text-xs uppercase tracking-wider py-2.5 px-6 transition-colors duration-300"
+                  className="bg-hri-green text-hri-cream hover:bg-hri-gold hover:text-hri-gold font-bold text-xs uppercase tracking-wider py-2.5 px-4 transition-colors duration-300 text-center"
                 >
                   View Program Details &rarr;
                 </button>
+                {program.applyLink && (
+                  <a
+                    href={program.applyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-hri-gold text-hri-green-dark hover:bg-hri-green hover:text-hri-cream font-bold text-xs uppercase tracking-wider py-2.5 px-6 transition-colors duration-300 text-center"
+                  >
+                    Apply &rarr;
+                  </a>
+                )}
               </div>
             </div>
           ))}

@@ -10,4 +10,5 @@ export interface ProgramData {
   duration?: string
   impact?: string
   icon: React.ReactNode
+  applyLink?: string
 }
