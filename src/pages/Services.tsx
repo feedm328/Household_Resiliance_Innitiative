@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import SEO from '@/components/shared/SEO'
 import ProgramList from '@/components/services/ProgramList'
 import ServiceFAQ from '@/components/services/ServiceFAQ'
+import ServiceCTA from '@/components/services/ServiceCTA'
 
 const Services: React.FC = () => {
   useEffect(() => {
@@ -33,8 +34,8 @@ const Services: React.FC = () => {
           </p>
         </div>
       </div>
-
       <ProgramList />
+      <ServiceCTA />
       <ServiceFAQ />
     </div>
   )
