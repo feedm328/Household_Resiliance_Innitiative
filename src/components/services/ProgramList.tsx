@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Heart, ShoppingCart, Home, Compass, Users2 } from 'lucide-react'
+import { Heart, ShoppingCart, Home, Compass, Users2, GraduationCap } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ProgramDetailModal from './ProgramDetailModal'
@@ -33,6 +33,22 @@ const ProgramList: React.FC = () => {
     },
     {
       id: 2,
+      title: 'Student Resilience Fund',
+      tag: 'Education',
+      description: 'Every student deserves the chance to focus on learning, not survival.',
+      longDescription: (
+        <div className="space-y-4">
+          <p>Keeping Students on the Path to Success.</p>
+          <p>Education has the power to transform lives, but for many students, an unexpected financial hardship can place that future at risk. A medical emergency, housing crisis, loss of income, transportation breakdown, or other unforeseen expense can quickly become a barrier to staying enrolled and completing a degree.</p>
+          <p>The Student Resilience Fund is an emergency assistance program of The Household Resilience Initiative that helps eligible college students (ages 18–23) address unexpected financial hardships affecting their education, housing, health, or basic needs. Our goal is simple: to keep students enrolled, supported, and on the path to success.</p>
+          <p>No student's dreams should be placed on hold by a temporary financial crisis.</p>
+        </div>
+      ),
+      icon: <GraduationCap size={24} className="text-hri-gold" />,
+      applyLink: '/apply/index.html'
+    },
+    {
+      id: 3,
       title: 'Food & Household Essentials',
       tag: 'Basic Needs',
       description: 'No parent should have to choose between paying a bill and feeding their family.',
@@ -45,7 +61,7 @@ const ProgramList: React.FC = () => {
       icon: <ShoppingCart size={24} className="text-hri-gold" />
     },
     {
-      id: 3,
+      id: 4,
       title: 'Housing Stability Support',
       tag: 'Housing',
       description: 'A home is more than a roof. It is a place where families rest, recover, and rebuild.',
@@ -58,7 +74,7 @@ const ProgramList: React.FC = () => {
       icon: <Home size={24} className="text-hri-gold" />
     },
     {
-      id: 4,
+      id: 5,
       title: 'Resource Navigation',
       tag: 'Guidance',
       description: 'Sometimes the hardest part is knowing where to begin.',
@@ -71,7 +87,7 @@ const ProgramList: React.FC = () => {
       icon: <Compass size={24} className="text-hri-gold" />
     },
     {
-      id: 5,
+      id: 6,
       title: 'Community Connection',
       tag: 'Community',
       description: 'Resilience grows in community.',
