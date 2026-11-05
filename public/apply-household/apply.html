@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Household Resilience Fund | Application</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="apply.css">
+</head>
+<body class="apply-body">
+
+  <!-- APP HEADER -->
+  <header class="apply-header">
+    <div class="apply-header-brand">
+      <img src="../hri-logo.jpeg" alt="The Household Resilience Initiative logo" class="apply-logo">
+      <div>
+        <p class="apply-brand-name">Household Resilience Fund</p>
+        <p class="apply-brand-sub">THE HOUSEHOLD RESILIENCE INITIATIVE</p>
+      </div>
+    </div>
+    <a href="index.html" class="apply-back-link">&larr; Back to fund information</a>
+  </header>
+
+  <!-- INTRO -->
+  <div class="apply-intro">
+    <p class="apply-eyebrow">Emergency Assistance Application</p>
+    <h1 class="apply-title">Let&rsquo;s begin your application.</h1>
+    <p class="apply-description">This secure, multi-step application can be completed at your own pace. Your information is reviewed confidentially and with compassion.</p>
+  </div>
+
+  <!-- STEP PROGRESS -->
+  <div class="apply-progress-row">
+    <span id="step-label">Before you apply</span>
+    <span id="step-count">Step 1 of 1</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <!-- FORM CARD -->
+  <form class="apply-card" id="apply-form" novalidate>
+    <input type="hidden" name="fund" value="household">
+
+    <!-- STEP 1: Before you apply -->
+    <section class="form-step" data-step="1" data-label="Before you apply">
+      <h2 class="step-heading">Before You Apply</h2>
+      <p class="step-intro">Thank you for your interest in the Household Resilience Fund.</p>
+      <p class="step-intro">The Household Resilience Fund exists to provide compassionate emergency assistance to individuals and families experiencing temporary financial hardship.</p>
+      <p class="step-intro">Every application is carefully reviewed by our team to ensure available resources are distributed fairly, responsibly, and to households facing genuine need.</p>
+      <p class="step-intro">Completing this application does not guarantee funding, as assistance depends on eligibility, verification, available resources, and program capacity.</p>
+
+      <div class="info-callout">
+        We understand that asking for help can be difficult. Our team reviews every application with dignity, confidentiality, and compassion.
+      </div>
+
+      <p class="step-intro" style="margin-top: 18px;">Please answer each question honestly and completely.</p>
+
+      <h3 class="sub-step-heading">Applicant Certification</h3>
+      <div class="field cert-box">
+        <label class="cert-item">
+          <input type="checkbox" name="certifyAccurate" value="Agreed" required>
+          <span>I certify that the information provided is true and complete to the best of my knowledge.</span>
+        </label>
+        <label class="cert-item">
+          <input type="checkbox" name="understandFalseInfo" value="Agreed" required>
+          <span>I understand that intentionally providing false or misleading information may result in denial of assistance.</span>
+        </label>
+        <label class="cert-item">
+          <input type="checkbox" name="understandFunding" value="Agreed" required>
+          <span>I understand that assistance through the Household Resilience Fund is provided based on available funding and eligibility requirements.</span>
+        </label>
+        <label class="cert-item">
+          <input type="checkbox" name="authorizeVerification" value="Agreed" required>
+          <span>I authorize The Household Resilience Initiative to verify information necessary to evaluate my application.</span>
+        </label>
+        <label class="cert-item">
+          <input type="checkbox" name="understandDocumentation" value="Agreed" required>
+          <span>I understand that supporting documentation may be required before assistance can be approved.</span>
+        </label>
+        <p class="field-error">Please confirm all five statements to continue.</p>
+      </div>
+    </section>
+
+    <!-- STEP 2: Applicant information -->
+    <section class="form-step" data-step="2" data-label="Applicant information" hidden>
+      <h2 class="step-heading">Applicant Information</h2>
+
+      <div class="field">
+        <label for="firstName">Legal First Name <span class="required-asterisk">*</span></label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="field">
+        <label for="middleName">Middle Name (Optional)</label>
+        <input type="text" id="middleName" name="middleName">
+      </div>
+      <div class="field">
+        <label for="lastName">Last Name <span class="required-asterisk">*</span></label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="field">
+        <label for="preferredName">Preferred Name (Optional)</label>
+        <input type="text" id="preferredName" name="preferredName">
+      </div>
+      <div class="field">
+        <label for="dob">Date of Birth <span class="required-asterisk">*</span></label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="field">
+        <label>Gender (Optional)</label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="gender" value="Female"> Female</label>
+          <label class="option"><input type="radio" name="gender" value="Male"> Male</label>
+          <label class="option"><input type="radio" name="gender" value="Non-binary"> Non-binary</label>
+          <label class="option"><input type="radio" name="gender" value="Prefer not to answer"> Prefer not to answer</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="phone">Primary Phone Number <span class="required-asterisk">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="phone2">Secondary Phone Number (Optional)</label>
+        <input type="tel" id="phone2" name="phone2">
+      </div>
+      <div class="field">
+        <label for="email">Email Address <span class="required-asterisk">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label>Preferred Method of Contact <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="preferredContact" value="Phone" required> Phone</label>
+          <label class="option"><input type="radio" name="preferredContact" value="Text" required> Text</label>
+          <label class="option"><input type="radio" name="preferredContact" value="Email" required> Email</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3: Household information -->
+    <section class="form-step" data-step="3" data-label="Household information" hidden>
+      <h2 class="step-heading">Household Information</h2>
+
+      <div class="field">
+        <label>What best describes your household? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="householdType" value="Single adult" required> Single adult</label>
+          <label class="option"><input type="radio" name="householdType" value="Couple without children" required> Couple without children</label>
+          <label class="option"><input type="radio" name="householdType" value="Single parent" required> Single parent</label>
+          <label class="option"><input type="radio" name="householdType" value="Couple with children" required> Couple with children</label>
+          <label class="option"><input type="radio" name="householdType" value="Two-parent household" required> Two-parent household</label>
+          <label class="option"><input type="radio" name="householdType" value="Multi-generational household" required> Multi-generational household</label>
+          <label class="option"><input type="radio" name="householdType" value="Other" required> Other</label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <p class="field-group-label">How many people currently live in your household? <span class="required-asterisk">*</span></p>
+      <div class="field">
+        <label for="numAdults">Adults (18+) <span class="required-asterisk">*</span></label>
+        <input type="number" id="numAdults" name="numAdults" required min="1" step="1" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="numChildren">Children (0–17) <span class="required-asterisk">*</span></label>
+        <input type="number" id="numChildren" name="numChildren" required min="0" step="1" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label for="numSeniors">Seniors (65+) <span class="required-asterisk">*</span></label>
+        <input type="number" id="numSeniors" name="numSeniors" required min="0" step="1" inputmode="numeric">
+      </div>
+      </div>
+
+      <div class="field">
+        <label>Are you currently responsible for any of the following? <span class="required-asterisk">*</span></label>
+        <p class="field-hint">Check all that apply.</p>
+        <div class="option-list checkbox-group" data-required="true" data-group-name="responsibleFor">
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Children under 5"> Children under 5</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Children 6–17"> Children 6–17</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Senior adult"> Senior adult</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Person with a disability"> Person with a disability</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Veteran"> Veteran</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Pregnant household member"> Pregnant household member</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="Foster child"> Foster child</label>
+          <label class="option"><input type="checkbox" name="responsibleFor" value="None of the above" data-exclusive> None of the above</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 4: Housing status -->
+    <section class="form-step" data-step="4" data-label="Housing status" hidden>
+      <h2 class="step-heading">Housing Status</h2>
+
+      <div class="field">
+        <label>Which best describes your current housing? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="housingStatus" value="Renting" required> Renting</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Homeowner" required> Homeowner</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Staying with family" required> Staying with family</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Staying with friends" required> Staying with friends</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Transitional housing" required> Transitional housing</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Shelter" required> Shelter</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Hotel/Motel" required> Hotel/Motel</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Living in vehicle" required> Living in vehicle</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Currently unhoused" required> Currently unhoused</label>
+          <label class="option"><input type="radio" name="housingStatus" value="Other" required> Other</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>How long have you lived at your current residence? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="housingDuration" value="Less than 3 months" required> Less than 3 months</label>
+          <label class="option"><input type="radio" name="housingDuration" value="3–12 months" required> 3–12 months</label>
+          <label class="option"><input type="radio" name="housingDuration" value="1–3 years" required> 1–3 years</label>
+          <label class="option"><input type="radio" name="housingDuration" value="More than 3 years" required> More than 3 years</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Are you currently at risk of losing your housing? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="housingAtRisk" value="Yes" required> Yes</label>
+          <label class="option"><input type="radio" name="housingAtRisk" value="No" required> No</label>
+        </div>
+      </div>
+
+      <div class="field" data-depends="housingAtRisk=Yes" hidden>
+        <label for="housingRiskExplain">If yes, please explain. <span class="required-asterisk">*</span></label>
+        <textarea id="housingRiskExplain" name="housingRiskExplain" rows="4" data-conditional-required></textarea>
+      </div>
+
+      <div class="field">
+        <label>Have you received an eviction notice? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="evictionNotice" value="Yes" required> Yes</label>
+          <label class="option"><input type="radio" name="evictionNotice" value="No" required> No</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Has your electricity, water, or gas received a shutoff notice? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="utilityShutoff" value="Yes" required> Yes</label>
+          <label class="option"><input type="radio" name="utilityShutoff" value="No" required> No</label>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- STEP 5: Employment -->
+    <section class="form-step" data-step="5" data-label="Employment" hidden>
+      <h2 class="step-heading">Employment</h2>
+
+      <div class="field">
+        <label>Current employment status <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="employmentStatus" value="Full-time" required> Full-time</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Part-time" required> Part-time</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Self-employed" required> Self-employed</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Seasonal" required> Seasonal</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Unemployed" required> Unemployed</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Retired" required> Retired</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Student" required> Student</label>
+          <label class="option"><input type="radio" name="employmentStatus" value="Unable to work" required> Unable to work</label>
+        </div>
+      </div>
+
+      <div class="field" data-depends="employmentStatus=Unemployed" hidden>
+        <label for="unemployedDuration">If unemployed, how long have you been unemployed? <span class="required-asterisk">*</span></label>
+        <input type="text" id="unemployedDuration" name="unemployedDuration" data-conditional-required>
+      </div>
+    </section>
+
+    <!-- STEP 6: Income -->
+    <section class="form-step" data-step="6" data-label="Income" hidden>
+      <h2 class="step-heading">Income</h2>
+
+      <div class="field">
+        <label>Primary source of household income <span class="required-asterisk">*</span></label>
+        <p class="field-hint">Check all that apply.</p>
+        <div class="option-list checkbox-group" data-required="true" data-group-name="incomeSources">
+          <label class="option"><input type="checkbox" name="incomeSources" value="Employment"> Employment</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Self-employment"> Self-employment</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Social Security"> Social Security</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="SSI"> SSI</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="SSDI"> SSDI</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Veteran Benefits"> Veteran Benefits</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Child Support"> Child Support</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Retirement"> Retirement</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="Public Assistance"> Public Assistance</label>
+          <label class="option"><input type="checkbox" name="incomeSources" value="None" data-exclusive> None</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="agi2024">Prior Year Household Adjusted Gross Income (2024) ($) <span class="required-asterisk">*</span></label>
+        <input type="number" id="agi2024" name="agi2024" min="0" step="0.01" inputmode="decimal" placeholder="$ 0.00" required>
+      </div>
+
+      <div class="field">
+        <label for="lastFilingDate">Most Recent Filing Date <span class="required-asterisk">*</span></label>
+        <input type="date" id="lastFilingDate" name="lastFilingDate" required>
+        <p class="field-hint">Enter the date you last submitted a return.</p>
+      </div>
+
+      <div class="field">
+        <label>Tax Year 2025 Filing Status <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="taxYear2025Status" value="Filed (Return submitted to the IRS)" required> Filed (Return submitted to the IRS)</label>
+          <label class="option"><input type="radio" name="taxYear2025Status" value="Filed Extension (Deadline extended to Oct 15, 2026)" required> Filed Extension (Deadline extended to Oct 15, 2026)</label>
+          <label class="option"><input type="radio" name="taxYear2025Status" value="Not Filed (Still preparing / pending)" required> Not Filed (Still preparing / pending)</label>
+          <label class="option"><input type="radio" name="taxYear2025Status" value="Not Required (Income below filing threshold)" required> Not Required (Income below filing threshold)</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 7: Financial hardship -->
+    <section class="form-step" data-step="7" data-label="Financial hardship" hidden>
+      <h2 class="step-heading">Financial Hardship</h2>
+
+      <div class="field">
+        <label>What circumstances contributed to your current hardship? <span class="required-asterisk">*</span></label>
+        <p class="field-hint">Check all that apply.</p>
+        <div class="option-list checkbox-group" data-required="true" data-group-name="hardshipCircumstances">
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Job loss"> Job loss</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Reduced work hours"> Reduced work hours</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Medical emergency"> Medical emergency</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Disability"> Disability</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Domestic violence"> Domestic violence</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Death of household member"> Death of household member</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Natural disaster"> Natural disaster</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Housing crisis"> Housing crisis</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Utility disconnection"> Utility disconnection</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Vehicle breakdown"> Vehicle breakdown</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Childcare costs"> Childcare costs</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Inflation / rising living expenses"> Inflation / rising living expenses</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Mental health crisis"> Mental health crisis</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Family emergency"> Family emergency</label>
+          <label class="option"><input type="checkbox" name="hardshipCircumstances" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Approximately when did your hardship begin? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="hardshipStart" value="Within the last 30 days" required> Within the last 30 days</label>
+          <label class="option"><input type="radio" name="hardshipStart" value="1–3 months ago" required> 1–3 months ago</label>
+          <label class="option"><input type="radio" name="hardshipStart" value="3–6 months ago" required> 3–6 months ago</label>
+          <label class="option"><input type="radio" name="hardshipStart" value="More than 6 months ago" required> More than 6 months ago</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 8: Assistance request -->
+    <section class="form-step" data-step="8" data-label="Assistance request" hidden>
+      <h2 class="step-heading">Household Resilience Fund Request</h2>
+
+      <div class="field">
+        <label>What type of assistance are you requesting today? <span class="required-asterisk">*</span></label>
+        <p class="field-hint">Check all that apply.</p>
+        <div class="option-list checkbox-group" data-required="true" data-group-name="assistanceType">
+          <label class="option"><input type="checkbox" name="assistanceType" value="Rent assistance"> Rent assistance</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Mortgage assistance"> Mortgage assistance</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Utility assistance"> Utility assistance</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Groceries"> Groceries</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Diapers"> Diapers</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Baby formula"> Baby formula</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Medical expenses"> Medical expenses</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Prescription medication"> Prescription medication</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Transportation"> Transportation</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Emergency hotel"> Emergency hotel</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Household essentials"> Household essentials</label>
+          <label class="option"><input type="checkbox" name="assistanceType" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="amountRequested">What is the total amount requested? ($) <span class="required-asterisk">*</span></label>
+        <input type="number" id="amountRequested" name="amountRequested" min="1" step="0.01" inputmode="decimal" placeholder="$ 0.00" required>
+      </div>
+
+      <div class="field">
+        <label>Who should payment be made to? <span class="required-asterisk">*</span></label>
+        <div class="option-list">
+          <label class="option"><input type="radio" name="paymentTo" value="Self (Applicant)" required> Self (Applicant)</label>
+          <label class="option"><input type="radio" name="paymentTo" value="Landlord" required> Landlord</label>
+          <label class="option"><input type="radio" name="paymentTo" value="Utility Company" required> Utility Company</label>
+          <label class="option"><input type="radio" name="paymentTo" value="Pharmacy" required> Pharmacy</label>
+          <label class="option"><input type="radio" name="paymentTo" value="Store" required> Store</label>
+          <label class="option"><input type="radio" name="paymentTo" value="Other Vendor" required> Other Vendor</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Further steps are added here as sections: <section class="form-step" data-step="N" data-label="..." hidden> -->
+
+    <!-- NAV BUTTONS -->
+    <div class="apply-nav">
+      <button type="button" class="btn-back" id="btn-back">&larr; Back</button>
+      <button type="button" class="btn-next" id="btn-next">Next &rarr;</button>
+    </div>
+
+    <p class="build-notice" id="build-notice" hidden>The remaining steps of this application are still being built. Nothing has been submitted.</p>
+  </form>
+
+  <!-- FOOTER -->
+  <footer class="apply-footer">
+    <img src="../hri-logo.jpeg" alt="The Household Resilience Initiative logo" class="apply-footer-logo">
+    <p>Technical Help &nbsp;|&nbsp; Privacy Policy</p>
+    <p>&copy; 2026 The Household Resilience Initiative</p>
+  </footer>
+
+  <!-- SUBMISSION CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="submit-modal" hidden>
+    <div class="modal-card">
+      <h2 class="modal-title">Household Resilience Fund Application Received!</h2>
+      <p class="modal-text">Thank you for submitting your Household Resilience Fund application.</p>
+      <p class="modal-text">Your application has been received and is now being carefully reviewed. We appreciate the opportunity to consider your request and will be in touch as soon as a decision is made. We wish you and your household the very best during this time.</p>
+      <button type="button" class="btn-apply modal-continue" id="modal-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <script src="apply.js"></script>
+</body>
+</html>

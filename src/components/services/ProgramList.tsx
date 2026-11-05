@@ -29,7 +29,7 @@ const ProgramList: React.FC = () => {
         </div>
       ),
       icon: <Heart size={24} className="text-hri-gold" />,
-      applyLink: 'https://householdresilientapply.netlify.app/'
+      applyLink: '/apply-household/index.html'
     },
     {
       id: 2,
