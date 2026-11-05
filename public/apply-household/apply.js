@@ -102,7 +102,7 @@ async function submitApplication() {
   const original = btnNext.innerHTML;
   btnNext.textContent = "Submitting...";
   try {
-    const res = await fetch("/api/submit-application", {
+    const res = await fetch("https://hhr-form.vercel.app/api/submit-application", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(collectData()),
