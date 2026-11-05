@@ -116,7 +116,7 @@ const ServiceCTA: React.FC = () => {
 
         {/* Placeholder link since user forgot to include the specific one */}
         <a
-          href="https://householdresilientapply.netlify.app/"
+          href="/apply-household/index.html"
           target="_blank"
           rel="noopener noreferrer"
           className="cta-text inline-flex items-center justify-center px-8 py-3 bg-hri-green-dark text-white font-medium hover:bg-hri-green transition-colors rounded-none group shadow-md"
